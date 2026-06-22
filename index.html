@@ -1,0 +1,141 @@
+<!--Tags below are for doctype, language, title and heading-->
+<!DOCTYPE html>
+    <html lang="en">
+    <title>EMMANUEL NANRET TIFFANY</title>
+<div class="content">   
+    <div class="card">
+        
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            background:#f4f4f4;
+            font-family: Arial, sans-serif;
+
+
+        /* Card */
+        .card{
+            width:70%;
+            margin:80px auto;
+            border:1px solid #ccc;
+            border-radius:5px;
+            padding:20px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            font-size:35px;
+            margin-bottom:20px;
+        }
+
+        h2{
+            margin-bottom:5px;
+        }
+
+        p{
+            font-size:16px;
+            color:#333;
+        }
+
+        button{
+            background:#66c7f2;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+    </style>
+        <head>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <h1>TIFFANY'S WEB PAGE</h1>
+            <style>
+            h1{
+                text-align:center;
+            }
+            </style>                
+        </head>
+        
+        <!--school details section -->
+        <body>
+            <section>
+
+            Name: EMMANUEL NANRET TIFFANY.<br>
+            Department: Computer Science<br>
+            Matriculation Number: UJ/2024/NS/0437<br>
+            Level: 200
+
+            </section>
+
+            <!--About this web page-->
+            <section>
+
+                <h2>About This Page</h2>
+
+                This is My first static webpage. It was created for my INS 205 assignment.</br>
+                the objective of the assigment is to show my understanding of HTML5 and CSS.
+
+            </section>
+
+            <!-- more about me -->
+            <section>
+
+                <h2>Hobbies:</h2>
+
+                <ul>
+
+                <li>Music</li>
+                <li>Basketball</li>
+
+                </ul>
+
+            </section>
+
+            <!--contact me -->
+            <section>
+
+                <h2>Contact Me</h2>
+                <a href="mailto:2024ns0437@unijos.edu.ng">
+                <button id="send-btn">
+                Send Email
+                </button>
+                </a>
+
+            </section>
+
+            <!--java script-->
+        <script>
+                /* -------------------------------------------------------
+                Matric-number → button colour
+                Replace the matric value below with your own number.
+                ------------------------------------------------------- */
+                const matric = "UJ/2024/NS/0437"; // <-- CHANGE THIS TO YOUR MAT. NO.
+
+            /* CHANGE NOTHING BEYOND THIS POINT - CHANGE NOTHING BEYOND THIS POINT */ 
+
+                function hashString(str) {
+                    let hash = 0;
+                    for (let i = 0; i < str.length; i++) {
+                        hash = (hash * 31 + str.charCodeAt(i)) >>> 0;
+                    }
+                    return hash;
+                }
+
+                // Normalise input
+                const normalised = matric.trim().toUpperCase();
+
+                // Map the hash to a hue value between 0 and 359 degrees
+                const hue = hashString(normalised) % 360;
+
+                // Build an HSL colour: fixed saturation & lightness, varying hue
+                const buttonColour = `hsl(${hue}, 65%, 45%)`;
+
+                // Apply the colour to the Send Email button
+                document.getElementById("send-btn").style.background = buttonColour;
+            </script>
+         </body>
+    </div>
+</div>   
+</html>
